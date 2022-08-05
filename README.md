@@ -19,15 +19,12 @@ This is a model optimization technique. A student model is developed with much l
 * Python (3.6 or higher)
 * Pandas
 * Keras 
-* Tensorflow – Python library for developing deep neural networks.
-* Numpy – Python library used for working with arrays.
-* Matplotlib – It is a Python library used for plotting graphs to visualise data.
-* Scipy – Python library used for solving mathematical, technical and scientific
-problems.
-* Scikit-Learn – Python library for machine learning. It contains various machine
-learning algorithms within it.
-* Seaborn – A Python library built on top of Matplotlib. It is also used to visualise
-data.
+* Tensorflow 
+* Numpy 
+* Matplotlib 
+* Scipy 
+* Scikit-Learn 
+* Seaborn 
 
 ### This project is ran/tested on Google Colab. 
 
@@ -38,6 +35,8 @@ data.
 # Model Architecture
 
 ## Teacher Model 
+![basemodel](https://user-images.githubusercontent.com/102278418/183062354-55ef2fdf-5683-468e-b685-0b1a87ebe682.jpg)
+
 * 1D convolutional layer with 32 filters after the initial input layer with Sigmoid activation function.
 * Average-pooling layer, with the pool size as 3
 * Another 1D convolutional layer with 64 filters with ReLU activation function.
@@ -52,6 +51,8 @@ data.
 
 
 ## Student Model Parameters 
+![Picture 1](https://user-images.githubusercontent.com/102278418/183062429-e1996e16-5f83-48ed-8888-c0f05b70798f.jpg)
+
 * 1D convolutional layer with 2 filters after the initial input layer with Sigmoid activation function.
 * Average-pooling layer, with the pool size as 3
 * Another 1D convolutional layer with 4 filters with ReLU activation function.
