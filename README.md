@@ -66,11 +66,14 @@ data.
 
 
 # Results
-### Teacher Model Accuracy: 89.667%  
-### Teacher Model Size: 523,418 bytes
+### Teacher Model 
+Accuracy: 89.667%  
+Size: 523,418 bytes
 
-### Student Model Accuracy: 88.357%  
-### Student Model Size: 132,153 bytes
+
+### Student Model 
+Accuracy: 88.357%  
+Size: 132,153 bytes
 
 
 # Acknowledgement
