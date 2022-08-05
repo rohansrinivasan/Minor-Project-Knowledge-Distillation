@@ -70,6 +70,8 @@ This is a model optimization technique. A student model is developed with much l
 ### Teacher Model 
 Accuracy: 89.667%  
 Size: 523,418 bytes
+![test_acc_minor](https://user-images.githubusercontent.com/102278418/183062692-509c9d74-e811-43c3-b066-cdbcd2e89087.jpg)
+![test_loss_minor](https://user-images.githubusercontent.com/102278418/183062716-c237755c-7cb7-4b37-8e88-6acab540cff2.jpg)
 
 
 ### Student Model 
