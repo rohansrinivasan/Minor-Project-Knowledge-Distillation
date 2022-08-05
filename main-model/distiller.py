@@ -1,17 +1,18 @@
 #Distill Student to Teacher
-
-distiller = Distiller1(student=stu_model, teacher=model) #invokes the KD class
+distiller = Distiller1(student=model2, teacher=model1)
 distiller.compile(
-    optimizer=adam,
-    metrics=['accuracy'],
+    optimizer=keras.optimizers.Adam(),
+    metrics=[keras.metrics.CategoricalAccuracy()],
     student_loss_fn=keras.losses.CategoricalCrossentropy(from_logits=True),
     distillation_loss_fn=keras.losses.KLDivergence(),
     alpha=0.1,
-    temperature=5,
-    )
-hist2= distiller.fit([emg_train, acc_train, gyr_train], y_train, epochs=50, batch_size=batch_size, verbose=True, validation_data=([emg_test, acc_test, gyr_test], y_test)) #, epochs=epochs,callbacks=[es]
-hist_arr2 = np.array([hist2.history['accuracy'],hist2.history['student_loss'],hist2.history['distillation_loss'],hist2.history['val_accuracy'],hist2.history['val_student_loss']])
+    temperature=3,
+)
+hist6=distiller.fit(X_train, y_train, epochs=50, batch_size=batch_size, verbose=True, validation_data=(X_test, y_test)) #, epochs=epochs,callbacks=[es]
+hist_arr6 = np.array([hist6.history['accuracy'],hist6.history['val_accuracy'],hist6.history['student_loss'],hist6.history['distillation_loss'],hist6.history['val_accuracy'],hist6.history['val_student_loss']])
 
+
+hist3=distiller.fit(X_train, y_train, epochs=epochs) #, epochs=epochs,callbacks=[es]
 # Test Accuracy
 plt.figure(5)
 plt.plot(hist_arr2[0])
